@@ -1,0 +1,26 @@
+{
+  "name": "ES6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "babel src -d dist -w",
+    "babel": "src/index.js --out-file dist/a.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexShan2008/ES6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexShan2008/ES6/issues"
+  },
+  "homepage": "https://github.com/AlexShan2008/ES6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
