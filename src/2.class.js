@@ -26,8 +26,6 @@ class Animal {
 //
 // //调用静态方法；
 // Animal.showInfo('static');//静态方法，只有类自己用有此方法。
-console.log(Animal.degree());
-
 
 //继承父类；
 class Cat extends Animal {
