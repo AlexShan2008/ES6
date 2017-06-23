@@ -6,7 +6,7 @@ const b = 'hello es6';
 let sum = (a, b) => (a + b);
 
 let obj = {
-    name: "tony",
+    name: "alexshan",
     courses: ["js", "css"],
     getMessage: function () {
         let that = this;//方法1

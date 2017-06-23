@@ -10,7 +10,7 @@ var sum = function sum(a, b) {
 };
 
 var obj = {
-    name: "tony",
+    name: "alexshan",
     courses: ["js", "css"],
     getMessage: function getMessage() {
         var that = this; //方法1

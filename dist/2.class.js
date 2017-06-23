@@ -48,10 +48,8 @@ var Animal = function () {
 // //调用静态方法；
 // Animal.showInfo('static');//静态方法，只有类自己用有此方法。
 
-
-console.log(Animal.degree());
-
 //继承父类；
+
 
 var Cat = function (_Animal) {
     _inherits(Cat, _Animal);
@@ -79,3 +77,27 @@ var Cat = function (_Animal) {
 var cat = new Cat("cat", "1", "red");
 cat.getMessage();
 cat.getName();
+
+//增强的对象字面量；
+var others = {
+    data: "other data"
+};
+
+var obj = {
+    __proto__: others,
+    name: 'alexshan',
+    getName: function getName() {
+        console.log(this.name);
+    }
+};
+
+obj.getName();
+
+var a = 1,
+    b = 2;
+var fn = function fn(m, n) {
+    return m + n;
+};
+
+var objAnother = { a: a, b: b, fn: fn };
+console.log(objAnother.fn(1, 2));

@@ -43,3 +43,25 @@ let cat = new Cat("cat", "1", "red");
 cat.getMessage();
 cat.getName();
 
+
+//增强的对象字面量；
+let others = {
+    data: "other data"
+};
+
+let obj = {
+    __proto__: others,
+    name: 'alexshan',
+    getName(){
+        console.log(this.name);
+    }
+};
+
+obj.getName();
+
+let a = 1,
+    b = 2;
+let fn = (m, n) => (m + n);
+
+let objAnother = {a, b, fn};
+console.log(objAnother.fn(1, 2));
