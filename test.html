@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Timer() {
+            this.s1 = 0;
+            this.s2 = 0;
+            // arrow function
+            setInterval(() => {
+                this.s1++;
+            }, 1000)
+            // normal function
+            setInterval(function () {
+                this.s2++;
+            }, 1000)
+        }
+        
+        var timer = new Timer();
+        setTimeout(() => {
+            console.log("s1:",timer.s1);
+        }, 3100);
+        setTimeout(() => {
+            console.log("s2:",timer.s2);
+        }, 3100);
+    </script>
+</body>
+
+</html>

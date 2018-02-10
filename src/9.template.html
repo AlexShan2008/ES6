@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let data = {
+            supplies: [
+                "Beijing",
+                "Shanghai",
+                "Hongkong",
+            ]
+        }
+
+        let template = `
+        <ul>
+            <% for(let i = 0 ; i <data.supplies.length; i++){  %>
+                <li><%= data.supplies[i] %></li>
+            <% } %>
+        </ul>
+        `
+
+        // 标签模板tag: 
+        // 1.紧跟函数名后面，该函数将被调用来处理这个字符串：
+        // 2.不是模板，而是函数调用的一种特殊形式。“标签”指的是函数，后面的模板字符串就是参数。
+        alert`123` //等同于 alert(123);
+
+        // 主要用途：
+        // 1.过滤HTML字符串，防止用户输入恶意内容；
+        // 2.多语言转换（国际化处理）
+        // 3.在JavaScript中嵌入其他语言
+
+        // 1. SaferHTML
+
+        let message = SaferHTML`<P>${sender} has sent you a message</P>`
+        function SaferHTML(templateData) {
+            let s = templateData[0];
+            for (let i = 1; i < arguments.length; i++) {
+                let arg = String(arguments[i]);
+
+                // Escape special characters in the substitution
+                s += arg.replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;");
+
+                // Don't escape special characters in the template
+                s += templateData[i];
+            }
+            return s;
+        }
+
+    </script>
+</body>
+
+</html>
