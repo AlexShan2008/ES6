@@ -8,6 +8,8 @@ class Animal {
     this.age = age;
   }
 
+  static flag = "flag";
+
   //动态方法，实例会继承此方法；
   getMessage() {
     console.log(this.name + "is" + this.age + "years old");

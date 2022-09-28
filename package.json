@@ -21,10 +21,11 @@
   },
   "homepage": "https://github.com/AlexShan2008/ES6#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
     "babel-loader": "^7.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
     "webpack": "^3.0.0"
   }
 }
